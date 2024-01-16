@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// HOMEWORK 1
+const person = {
+    name: "Thorfinn",
+    imgUrl: "https://u.to/iS89IA",
+    imgSize: 140
 }
-
-export default App;
+export default function Information() {
+    return (
+        <>
+            <h1>{person.name}</h1>
+            <img className="VinlandSaga" src={person.imgUrl} alt={'Photo of' + person.name}
+                 style={{width: person.imgSize, height: person.imgSize}}/>
+        </>
+    )
+}
